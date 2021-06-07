@@ -3,7 +3,7 @@ import json
 
 class Database:
     def __init__(self, filename = 'data.db'):
-        self.connection = sqlite3.connect('tmp/' + filename)
+        self.connection = sqlite3.connect(filename)
         self.__createTable()
 
     def __del__(self):
